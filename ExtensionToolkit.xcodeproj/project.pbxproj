@@ -10,6 +10,7 @@
 		5AA09872205692100057517D /* ExtensionToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA09868205692100057517D /* ExtensionToolkit.framework */; };
 		5AA09877205692100057517D /* ExtensionToolkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA09876205692100057517D /* ExtensionToolkitTests.swift */; };
 		5AA09879205692100057517D /* ExtensionToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AA0986B205692100057517D /* ExtensionToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AA098832056926F0057517D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA098822056926F0057517D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		5AA09871205692100057517D /* ExtensionToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtensionToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA09876205692100057517D /* ExtensionToolkitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionToolkitTests.swift; sourceTree = "<group>"; };
 		5AA09878205692100057517D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AA098822056926F0057517D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		5AA0986A205692100057517D /* ExtensionToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				5AA09884205693400057517D /* Code */,
 				5AA0986B205692100057517D /* ExtensionToolkit.h */,
 				5AA0986C205692100057517D /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				5AA09878205692100057517D /* Info.plist */,
 			);
 			path = ExtensionToolkitTests;
+			sourceTree = "<group>";
+		};
+		5AA09884205693400057517D /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				5AA098822056926F0057517D /* Extensions.swift */,
+			);
+			path = Code;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				TargetAttributes = {
 					5AA09867205692100057517D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					5AA09870205692100057517D = {
@@ -196,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA098832056926F0057517D /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +347,7 @@
 		5AA0987D205692100057517D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.northwoodgames.ExtensionToolkit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +369,7 @@
 		5AA0987E205692100057517D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +390,7 @@
 		5AA09880205692100057517D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ExtensionToolkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +404,7 @@
 		5AA09881205692100057517D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ExtensionToolkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
