@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "github.com/xenoph/ExtensionToolkit.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@github.com:xenoph/ExtensionToolkit.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
