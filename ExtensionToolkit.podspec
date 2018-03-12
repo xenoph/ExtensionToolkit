@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 			Extensions that can be useful for many things. 
                    DESC
 
-  s.homepage     = ""
+  s.homepage     = "http://www.dahle.me"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
