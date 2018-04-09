@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 public extension Int {
     /*
@@ -34,5 +35,70 @@ public extension Int {
 public extension CGFloat {
     public static func parseHMS(hms: String) -> CGFloat {
         return CGFloat(Int.parseHMS(hms: hms))
+    }
+}
+
+extension NSManagedObject {
+    open override func didChange(_ changeKind: NSKeyValueChange, valuesAt indexes: IndexSet, forKey key: String) {
+        super.didChange(changeKind, valuesAt: indexes, forKey: key)
+        guard let automappable = self as? Automappable else {
+            return
+        }
+        if let autoMapTo = automappable.automapKeys()?[key] {
+            setValue(value(forKey: key), forKey: autoMapTo)
+        }
+    }
+}
+
+public enum LineFill {
+    case dotted
+    case line
+    case space
+}
+
+public extension UILabel {
+    public func fillLine(_ fill: LineFill) {
+        guard attributedText == self.attributedText else {
+            var string = NSString(string: self.text!)
+            var textSize: CGSize = string.size(withAttributes: [NSAttributedStringKey.font: self.font])
+            
+            while (textSize.width < self.bounds.width - 16) {
+                self.text = self.text! + stringForFill(fill)
+                string = NSString(string: self.text!)
+                textSize = string.size(withAttributes: [NSAttributedStringKey.font: self.font])
+            }
+            return
+        }
+        
+        let textSize: CGSize = self.attributedText!.size()
+        let font = UIFont(name: "AvenirNext-Regular", size: self.font.pointSize) ?? UIFont.systemFont(ofSize: self.font.pointSize)
+        let fillString: NSMutableAttributedString = NSMutableAttributedString(string: "", attributes: [NSAttributedStringKey.font: font])
+
+        while (textSize.width + fillString.size().width < self.bounds.width - 16) {
+            let filler = NSAttributedString(string: stringForFill(fill), attributes: [NSAttributedStringKey.font: font])
+            fillString.append(filler)
+        }
+        
+        self.attributedText = NSMutableAttributedString(attributedString: self.attributedText!).appending(fillString)
+    }
+    
+    fileprivate func stringForFill(_ fill: LineFill) -> String {
+        if fill == .dotted {
+            return "."
+        }
+        
+        if fill == .line {
+            return "_"
+        }
+        
+        return " "
+    }
+}
+
+public extension NSMutableAttributedString {
+    public func appending(_ string: NSAttributedString) -> NSMutableAttributedString {
+        let text = NSMutableAttributedString(attributedString: self)
+        text.append(string)
+        return text
     }
 }

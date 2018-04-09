@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ExtensionToolkit"
-  s.version      = "0.0.2"
+  s.version      = "0.0.6"
   s.summary      = "A pod containing useful extensions"
 
   # This description is used to generate tags and improve search results.
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "8.0"
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Code", "ExtensionToolkit/Code/*.swift"
+  s.source_files  = "Code", "ExtensionToolkit/Code/**/*.swift"
   #s.exclude_files = "Code/Exclude"
 
   # s.public_header_files = "Code/**/*.h"

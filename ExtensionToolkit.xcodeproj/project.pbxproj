@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3BF1212057C2540008396F /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BF1202057C2540008396F /* FetchData.swift */; };
+		5A3C90F720580C0B0058A3BD /* Automappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C90F620580C0B0058A3BD /* Automappable.swift */; };
 		5AA09872205692100057517D /* ExtensionToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA09868205692100057517D /* ExtensionToolkit.framework */; };
 		5AA09877205692100057517D /* ExtensionToolkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA09876205692100057517D /* ExtensionToolkitTests.swift */; };
 		5AA09879205692100057517D /* ExtensionToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AA0986B205692100057517D /* ExtensionToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AA098832056926F0057517D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA098822056926F0057517D /* Extensions.swift */; };
-		5AA098862056ACF00057517D /* AddAttributesIntoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA098852056ACF00057517D /* AddAttributesIntoData.swift */; };
+		5ABA929B2057C05C003DE7C7 /* DataExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABA929A2057C05C003DE7C7 /* DataExtraction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A3BF1202057C2540008396F /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
+		5A3C90F620580C0B0058A3BD /* Automappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automappable.swift; sourceTree = "<group>"; };
 		5AA09868205692100057517D /* ExtensionToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtensionToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA0986B205692100057517D /* ExtensionToolkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionToolkit.h; sourceTree = "<group>"; };
 		5AA0986C205692100057517D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,7 +36,7 @@
 		5AA09876205692100057517D /* ExtensionToolkitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionToolkitTests.swift; sourceTree = "<group>"; };
 		5AA09878205692100057517D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA098822056926F0057517D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		5AA098852056ACF00057517D /* AddAttributesIntoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAttributesIntoData.swift; sourceTree = "<group>"; };
+		5ABA929A2057C05C003DE7C7 /* DataExtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtraction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3C90F520580BFC0058A3BD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5A3C90F620580C0B0058A3BD /* Automappable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		5AA0985E205692100057517D = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +106,10 @@
 		5AA09884205693400057517D /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				5A3C90F520580BFC0058A3BD /* Protocols */,
 				5AA098822056926F0057517D /* Extensions.swift */,
-				5AA098852056ACF00057517D /* AddAttributesIntoData.swift */,
+				5ABA929A2057C05C003DE7C7 /* DataExtraction.swift */,
+				5A3BF1202057C2540008396F /* FetchData.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -211,7 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AA098862056ACF00057517D /* AddAttributesIntoData.swift in Sources */,
+				5A3C90F720580C0B0058A3BD /* Automappable.swift in Sources */,
+				5ABA929B2057C05C003DE7C7 /* DataExtraction.swift in Sources */,
+				5A3BF1212057C2540008396F /* FetchData.swift in Sources */,
 				5AA098832056926F0057517D /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
